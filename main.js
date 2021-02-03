@@ -1,4 +1,4 @@
-const container=document.querySelector(".customer-profile")
+const container=document.querySelector("#customer-profile") // I originally had a . for a class instead of an ID where I should use a pound symbol.
 let customer = customers[0]
 console.log('customer title is', customer.name.title)
 console.log('Whats your first name?', customer.name.first)
@@ -25,8 +25,7 @@ email.innerText= `${customer.email}`
 container.appendChild(email)
 
 const mailingAdd= document.createElement("h3")
-mailingAdd.innerText= `${customer.location.street.name}
-${customer.location.city}, ${nameToAbbr(customer.location.state)} ${customer.location.postcode}`
+mailingAdd.innerText= `${customer.location.street.name} ${customer.location.city}, ${nameToAbbr(customer.location.state)} ${customer.location.postcode}`
 container.appendChild(mailingAdd)
 
 const dob= document.createElement("p")
@@ -34,7 +33,7 @@ dob.innerText= `${customer.dob.age}`
 container.appendChild (dob)
 
 const customerEstDate= document.createElement("h3")
-customerEstDate= document.innerText= `{customer.registered.age}`
+customerEstDate.innerText= `${customer.registered.age}`
 container.appendChild (customerEstDate)
 
 }
